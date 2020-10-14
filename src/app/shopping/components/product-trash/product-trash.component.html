@@ -1,0 +1,14 @@
+<div class="row">
+    <ng-container *ngFor="let product of trashProducts; let i=index;">
+        <div class="col-lg-4 card">
+            <img src="{{product.imageUrl}}" style="width:100%; height:150px;">
+            <h1>{{product.title}}</h1>
+            <p>
+                <!-- <button class="btn btn-primary col-lg-6" [routerLink]="['/edit',product.productId]">Edit</button>
+                <button class="btn btn-danger col-lg-6" (click)="deleteProduct(product.productId)">Delete</button> -->
+                <button class="btn btn-primary col-lg-6" (click)="openRestoreDialog(product.productId)">Restore</button>
+                <button class="btn btn-danger col-lg-6" (click)="openConfirmDeleteDialog(product.productId)">Delete</button>
+            </p>
+        </div>
+    </ng-container>
+</div>

@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-lg-6" style="max-height: 400px;">
+        <lib-ngx-image-zoom [thumbImage]=product.imageUrl [fullImage]=product.imageUrl [magnification]="2"
+            [enableScrollZoom]="true" [enableLens]="true" [lensWidth]="200"></lib-ngx-image-zoom>
+    </div>
+    <div class="col-lg-6">
+        <h3><strong>{{product.title}}</strong></h3>
+        <div>{{product.description}}</div>
+        <br>
+        <div><strong>Rs.</strong>{{product.price}}</div>
+        <br>
+        <br>
+        <div>
+            <form [formGroup]="form">
+                <ngx-input-star-rating formControlName="rating" [disabled]="true"></ngx-input-star-rating>
+            </form>
+        </div>
+        <div>
+            <span><strong>Location</strong></span>&nbsp;
+            <span>{{product.location}}</span>
+        </div>
+    </div>
+</div>
